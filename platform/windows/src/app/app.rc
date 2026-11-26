@@ -1,0 +1,73 @@
+#include <winres.h>
+
+#include "app-info.h"
+#include "app-resource.h"
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "app.manifest"
+
+IDI_APP_ICON ICON "plain-path-copy.ico"
+
+IDD_MAIN DIALOGEX 0, 0, 300, 300
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION |
+      WS_SYSMENU | WS_MINIMIZEBOX
+EXSTYLE WS_EX_APPWINDOW
+CAPTION APP_NAME_STRING
+FONT 9, "MS Shell Dlg 2", 400, 0, 0x1
+BEGIN
+  GROUPBOX        "File Explorer context menu", IDC_STATIC, 7, 7, 286, 72
+  // SS_NOPREFIX: folder paths and Windows' messages may contain "&".
+  LTEXT           "", IDC_MENU_STATUS, 15, 20, 270, 32, SS_NOPREFIX
+  PUSHBUTTON      "&Add to Context Menu", IDC_ADD, 15, 56, 118, 16
+  PUSHBUTTON      "&Remove from Context Menu", IDC_REMOVE, 139, 56, 118, 16
+
+  GROUPBOX        "Quotation marks", IDC_STATIC, 7, 85, 286, 76
+  AUTORADIOBUTTON "Only when the path contains &spaces",
+                  IDC_QUOTE_WHEN_NEEDED, 15, 98, 270, 10, WS_GROUP | WS_TABSTOP
+  AUTORADIOBUTTON "Al&ways", IDC_QUOTE_ALWAYS, 15, 110, 270, 10
+  AUTORADIOBUTTON "&Never", IDC_QUOTE_NEVER, 15, 122, 270, 10
+  LTEXT           "", IDC_QUOTE_EXAMPLE, 15, 137, 270, 18,
+                  SS_NOPREFIX | NOT WS_GROUP
+
+  GROUPBOX        "Feedback", IDC_STATIC, 7, 167, 286, 104
+  LTEXT           "", IDC_FEEDBACK_INTRO, 15, 180, 270, 34
+  LTEXT           "For a bug, include what you did and what happened.",
+                  IDC_FEEDBACK_HINT, 15, 216, 270, 10, WS_DISABLED
+  PUSHBUTTON      "Report a &Bug", IDC_REPORT_BUG, 15, 230, 84, 16
+  PUSHBUTTON      "Request a &Feature", IDC_REQUEST_FEATURE, 104, 230, 84, 16
+  PUSHBUTTON      "Open &Contact Form", IDC_CONTACT_FORM, 193, 230, 92, 16
+  LTEXT           "", IDC_FEEDBACK_ERROR, 15, 250, 270, 18,
+                  SS_NOPREFIX | NOT WS_VISIBLE
+
+  LTEXT           "", IDC_VERSION, 7, 281, 180, 10
+  DEFPUSHBUTTON   "Close", IDCANCEL, 243, 277, 50, 16
+END
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION APP_VERSION_COMMAS
+ PRODUCTVERSION APP_VERSION_COMMAS
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS 0x0L
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904b0"
+    BEGIN
+      VALUE "CompanyName", APP_PUBLISHER_DISPLAY_NAME_STRING
+      VALUE "FileDescription", APP_NAME_STRING
+      VALUE "FileVersion", APP_VERSION_STRING
+      VALUE "InternalName", "plain-path-copy"
+      VALUE "OriginalFilename", "plain-path-copy.exe"
+      VALUE "ProductName", APP_NAME_STRING
+      VALUE "ProductVersion", APP_VERSION_STRING
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1200
+  END
+END

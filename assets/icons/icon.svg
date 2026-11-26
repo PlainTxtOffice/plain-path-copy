@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Plain Path Copy: a folder with a forward slash. Full-bleed square;
+       each platform applies its own shape. -->
+  <rect width="1024" height="1024" fill="#1F4E79"/>
+  <path d="M160 300 A60 60 0 0 1 220 240 H410 L490 320 H804 A60 60 0 0 1 864 380 V740 A60 60 0 0 1 804 800 H220 A60 60 0 0 1 160 740 Z" fill="#F4F6F8"/>
+  <line x1="590" y1="408" x2="434" y2="712" stroke="#1F4E79" stroke-width="92" stroke-linecap="round"/>
+</svg>

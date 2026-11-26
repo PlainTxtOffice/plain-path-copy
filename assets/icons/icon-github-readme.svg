@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Generated from icon.svg by scripts/make-github-readme-icon.py.
+  Do not edit by hand: change the master icon and rerun the script.
+  The master is nested unchanged inside a rounded-corner clip path
+  because GitHub strips CSS from README images.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <clipPath id="github-readme-corners">
+      <rect x="0" y="0" width="1024" height="1024" rx="225.28" ry="225.28"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#github-readme-corners)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" x="0" y="0" width="1024" height="1024">
+  <!-- Plain Path Copy: a folder with a forward slash. Full-bleed square;
+       each platform applies its own shape. -->
+  <rect width="1024" height="1024" fill="#1F4E79"/>
+  <path d="M160 300 A60 60 0 0 1 220 240 H410 L490 320 H804 A60 60 0 0 1 864 380 V740 A60 60 0 0 1 804 800 H220 A60 60 0 0 1 160 740 Z" fill="#F4F6F8"/>
+  <line x1="590" y1="408" x2="434" y2="712" stroke="#1F4E79" stroke-width="92" stroke-linecap="round"/>
+</svg>
+  </g>
+</svg>
