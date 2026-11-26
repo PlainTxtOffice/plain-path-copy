@@ -13,6 +13,7 @@
 </p>
 
 <p align="center">
+  <a href="#download">Download</a> ·
   <a href="docs/USER_MANUAL.md">User manual</a>
 </p>
 <!-- rumdl-enable MD033 MD041 -->
@@ -25,8 +26,8 @@ Windows' **Copy as path** copies `"H:\documents\work\notes.txt"`, but code,
 shells, configuration files, and many tools want `H:/documents/work/notes.txt`.
 Plain Path Copy adds a second command, **Copy as path (/)**, to the Windows 11
 context menu itself, so you never need **Show more options**, and leaves
-Windows' own command alone. It is a small, portable Windows app
-for anyone who pastes paths into code or a terminal.
+Windows' own command alone. It is a small Windows app for anyone who pastes
+paths into code or a terminal.
 
 ## Features
 
@@ -46,6 +47,17 @@ for anyone who pastes paths into code or a terminal.
   </a>
 </p>
 <!-- rumdl-enable MD033 -->
+
+## Download
+
+| Platform | Download | Notes |
+| --- | --- | --- |
+| Windows (installer) | [plain-path-copy-setup.exe](https://github.com/PlainTxtOffice/plain-path-copy/releases/latest/download/plain-path-copy-setup.exe) | Installs for your account without administrator rights and adds the command for you. |
+| Windows (portable) | [plain-path-copy-portable.zip](https://github.com/PlainTxtOffice/plain-path-copy/releases/latest/download/plain-path-copy-portable.zip) | Runs from any folder you choose. |
+
+Both require Windows 11 on an x64 PC and are signed by Plain Text Office LLC.
+See the
+[release notes](https://github.com/PlainTxtOffice/plain-path-copy/releases/latest).
 
 ## User Manual
 

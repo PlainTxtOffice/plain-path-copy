@@ -20,31 +20,45 @@ It is for anyone who pastes Windows paths into code, terminals, or documents
 and is tired of replacing backslashes by hand. Windows' own **Copy as path**
 stays in the menu unchanged.
 
-Plain Path Copy runs on Windows (in development). It has a context menu
-command and a small settings window.
+Plain Path Copy runs on Windows. It has a context menu command and a small
+settings window.
 <!-- Verified from: platform/windows/CMakeLists.txt [APP_MENU_TITLE] -->
 <!-- Verified from: platform/windows/src/core/path-format.cpp -->
 
 ## Installation and Setup
 
-Plain Path Copy for Windows is in development and has no download yet. This
-section will list the download and its steps once it is released.
+Plain Path Copy needs Windows 11 on an x64 PC. It comes two ways, and neither
+needs administrator rights:
 
-It needs Windows 11 on an x64 PC.
+| Download | What it does |
+| --- | --- |
+| [plain-path-copy-setup.exe](https://github.com/PlainTxtOffice/plain-path-copy/releases/latest/download/plain-path-copy-setup.exe) | Installs Plain Path Copy for your account and adds the command for you |
+| [plain-path-copy-portable.zip](https://github.com/PlainTxtOffice/plain-path-copy/releases/latest/download/plain-path-copy-portable.zip) | Runs from a folder you choose; you add the command yourself |
 <!-- Verified from: platform/windows/package/AppxManifest.xml.in [ProcessorArchitecture] -->
+<!-- Verified from: https://github.com/PlainTxtOffice/plain-path-copy/releases/tag/v1.0.0 -->
+
+### Install with the Setup Program
+
+1. Download `plain-path-copy-setup.exe` and open it.
+1. Select **Next**, then **Next** again to keep the suggested folder, then
+   **Install**.
+1. Select **Finish**.
+
+Setup installs Plain Path Copy into
+`C:/Users/<you>/AppData/Local/Programs/plain-text-office/plain-path-copy` and
+adds **Copy as path (/)** to the File Explorer context menu.
+<!-- Verified from: platform/windows/scripts/advanced-installer/build-installer.ps1 [Initialize-Project] -->
+<!-- Verified from: an interactive install of plain-path-copy-1.0.0-setup.exe [Welcome, Select Installation Folder, Ready to Install, Completing pages] -->
 
 ### Add the Command to the Context Menu
 
-Plain Path Copy for Windows will come two ways: a setup program, which
-installs it for your account and adds the command for you, and a portable
-version, which runs from the folder you keep it in. Neither needs
-administrator rights. The steps below are for the portable version; after
-the setup program finishes, the command is already in the menu.
+These steps are for the portable version. After the setup program finishes,
+the command is already in the menu.
 
-1. Put the Plain Path Copy folder where it will stay, such as
-   `C:/Users/<you>/Programs/plain-path-copy`. The menu entry runs the
-   program from this folder, so moving the folder later removes the command
-   from the menu until you add it again.
+1. Extract `plain-path-copy-portable.zip` to the folder where Plain Path Copy
+   will stay, such as `C:/Users/<you>/Programs/plain-path-copy`. The menu
+   entry runs the program from this folder, so moving the folder later
+   removes the command from the menu until you add it again.
 1. Open `plain-path-copy.exe` in that folder.
 1. Select **Add to Context Menu**.
 
