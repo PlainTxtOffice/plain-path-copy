@@ -29,6 +29,7 @@
 CMakeLists.txt text eol=lf
 CMakePresets.json text eol=lf
 LICENSE text eol=lf
+*.aip text eol=lf
 
 # Swift and Xcode text files keep LF so Xcode reads the same files a Mac would
 # check out, including working trees opened over a network share.

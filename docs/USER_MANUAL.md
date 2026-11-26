@@ -35,8 +35,11 @@ It needs Windows 11 on an x64 PC.
 
 ### Add the Command to the Context Menu
 
-Plain Path Copy is portable: it runs from the folder you keep it in and puts
-nothing elsewhere on your computer except its menu entry and one setting.
+Plain Path Copy for Windows will come two ways: a setup program, which
+installs it for your account and adds the command for you, and a portable
+version, which runs from the folder you keep it in. Neither needs
+administrator rights. The steps below are for the portable version; after
+the setup program finishes, the command is already in the menu.
 
 1. Put the Plain Path Copy folder where it will stay, such as
    `C:/Users/<you>/Programs/plain-path-copy`. The menu entry runs the
@@ -51,8 +54,14 @@ its settings from there.
 <!-- Verified from: platform/windows/src/app/settings-window.cpp [RefreshStatus] -->
 <!-- Verified from: platform/windows/src/app/package-registration.cpp [Add] -->
 <!-- Verified from: Get-StartApps on a development build [Plain Path Copy] -->
+<!-- Verified from: platform/windows/scripts/advanced-installer/build-installer.ps1 [Initialize-Project] -->
 
 ### Update to a New Version
+
+If you installed Plain Path Copy with its setup program, run the new setup
+program. It replaces the old version and keeps the command in the menu.
+
+For the portable version:
 
 1. Close Plain Path Copy if it is open.
 1. Extract the new version over the old one, into the same folder.
@@ -63,6 +72,12 @@ its settings from there.
 <!-- Verified from: platform/windows/src/app/package-registration.cpp [Add] -->
 
 ### Remove Plain Path Copy
+
+If you installed Plain Path Copy with its setup program, uninstall it from
+**Settings** > **Apps** > **Installed apps**. That removes the command and the
+program's files.
+
+For the portable version:
 
 1. Open Plain Path Copy and select **Remove from Context Menu**.
 1. Wait for the status to say the command is not in the context menu.

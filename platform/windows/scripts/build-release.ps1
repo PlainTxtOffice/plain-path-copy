@@ -7,9 +7,11 @@ Builds and tests the Release configuration, packs the sparse package with
 makeappx, and zips the app as build/release/plain-path-copy-<version>-portable.zip.
 
 The zip holds plain-path-copy.exe, plain-path-copy-shell.dll,
-plain-path-copy.msix, and the package logos. Windows installs only a signed
-package, so a release for other people must be built with -Sign. Without it
-the zip is useful only for checking the layout.
+plain-path-copy.msix, and the package logos. They are staged in
+build/release/payload/, which scripts/advanced-installer/build-installer.ps1
+packages into the setup program. Windows installs only a signed package, so a
+release for other people must be built with -Sign. Without it the zip is
+useful only for checking the layout.
 
 .PARAMETER Sign
 Signs the DLL, the executable, and the package with the Plain Text Office
@@ -57,7 +59,9 @@ try {
     $layout = Join-Path $projectRoot 'build/x64/layout/Release'
     $releaseRoot = Join-Path $projectRoot 'build/release'
     $name = "plain-path-copy-$version-portable"
-    $stage = Join-Path $releaseRoot $name
+    # A version-independent folder, so the installer project can keep
+    # synchronizing the same path from release to release.
+    $stage = Join-Path $releaseRoot 'payload'
     $packageLayout = Join-Path $releaseRoot 'package'
     $zip = Join-Path $releaseRoot "$name.zip"
 
